@@ -19,7 +19,7 @@ land_50m = cfeature.NaturalEarthFeature('physical', 'land', '50m')
 
 def removeCAA(dataset_X, dataset_y):
     idx = []
-    shp = shapefile.Reader('C:/Users/zq19140/OneDrive - University of Bristol/Documents/QGIS/MASIE_CAA_one.shp') #open the shapefile
+    shp = shapefile.Reader('location MAISIE shapefile CAA') #open the shapefile
     all_shapes = shp.shapes() # get all the polygons   
     boundary = all_shapes[1] # get a boundary polygon
     for i in range(len(dataset_y)):
@@ -37,8 +37,8 @@ def one_month_training(location, scat, month):
     '''Get training data 2011-2020 for one given month
     '''
     #Open training data
-    dataset_X_train = pd.read_csv('C:/Users/zq19140/OneDrive - University of Bristol/Documents/Projects/icecharts_thickness/data/interim/datasetsML/monthly/'+location+'/incl_'+scat+'/edit/dataset_x_2011-2019_'+month+'.csv') 
-    dataset_y_train = pd.read_csv('C:/Users/zq19140/OneDrive - University of Bristol/Documents/Projects/icecharts_thickness/data/interim/datasetsML/monthly/'+location+'/incl_'+scat+'/edit/dataset_y_2011-2019_'+month+'.csv') #lat, lon, yr_data, dataset_y[:,0]
+    dataset_X_train = pd.read_csv('../../data/training_dataset/'+scat+'-band/dataset_x_2011-2020_'+month+'.csv') 
+    dataset_y_train = pd.read_csv('../../data/training_dataset/'+scat+'-band/dataset_y_2011-2020_'+month+'.csv')
     dataset_X_train = dataset_X_train.drop(np.where(dataset_y_train.lat<60)[0]).reset_index(drop=True)
     dataset_y_train = dataset_y_train.drop(np.where(dataset_y_train.lat<60)[0]).reset_index(drop=True)
     
@@ -67,8 +67,8 @@ def get_testing_data(dataset_X, dataset_y, yr_compare, month, all_months='off'):
 
 def open_1992_2020_data(scat, month):
     #Open dataset 1990-2019
-    dataset_X = pd.read_csv('C:/Users/zq19140/OneDrive - University of Bristol/Documents/Projects/icecharts_thickness/data/interim/datasetsML/no_CS2/all_locations/incl_'+scat+'/edit/dataset_x_1992-2019_'+month+'.csv') 
-    dataset_y = pd.read_csv('C:/Users/zq19140/OneDrive - University of Bristol/Documents/Projects/icecharts_thickness/data/interim/datasetsML/no_CS2/all_locations/incl_'+scat+'/edit/dataset_y_1992-2019_'+month+'.csv') #lat, lon, yr_data, dataset_y[:,0]
+    dataset_X = pd.read_csv('../../data/dataset/'+scat+'-band/dataset_x_1992-2020_'+month+'.csv') 
+    dataset_y = pd.read_csv('../../data/dataset/'+scat+'-band/dataset_y_1992-2020_'+month+'.csv') #lat, lon, yr_data, dataset_y[:,0]
     
     land = np.where(np.nansum(dataset_X.drop('Scatterometer', axis=1), axis=1)==0)[0]
     dataset_y = dataset_y.drop(land).reset_index(drop=True)
