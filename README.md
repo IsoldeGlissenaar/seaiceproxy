@@ -7,10 +7,16 @@ Code creates a Random Forest Regression model that creates a proxy product for C
 seaiceproxy/
 │
 ├─ data/
+│  ├─ dataset/                       | dataset used in RFR model to create SIT proxy
+│  │  ├─ C-band/
+│  │  └─ Ku-band/
+│  └─ training_dataset/              | dataset used to train RFR model
+│     ├─ C-band/
+│     └─ Ku-band/
 │
 ├─ model/
-│  ├─ README.txt          | Explanation of contents folder
-│  ├─ RFR_C_01.sav        | Trained Random Forest Regression Model C-band January
+│  ├─ README.txt                     | Explanation of contents folder
+│  ├─ RFR_C_01.sav                   | Trained Random Forest Regression Model C-band January
 │  ├─ RFR_C_02.sav		
 │  ├─ RFR_C_03.sav		
 │  ├─ RFR_C_04.sav		
@@ -30,7 +36,7 @@ seaiceproxy/
 │  ├─ functions/                    | Define functions
 │  ├─ preprocessing/                | Preprocessing of ice charts
 │  ├─ testing/                      | Testing model
-│  ├─ predict_sit_1992-2020.py      | Train and apply model
+│  └─ predict_sit_1992-2020.py      | Train and apply model
 |
 └─ README.md
 
