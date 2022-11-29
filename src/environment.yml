@@ -1,13 +1,13 @@
 name: proxysit
 channels:
   - conda-forge
-  - conda
+  - defaults
 dependencies:
   - numpy
   - xarray
   - pandas
   - scipy
-  - sklearn
+  - scikit-learn
   - matplotlib
   - cartopy
   - calendar
@@ -15,3 +15,9 @@ dependencies:
   - shapely
   - glob
   - geopandas
+  - h5py
+  - hdf4
+  - hdf5
+  - rasterio
+  
+  
