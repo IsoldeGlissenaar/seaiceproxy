@@ -1,0 +1,17 @@
+name: proxysit
+channels:
+  - conda-forge
+  - conda
+dependencies:
+  - numpy
+  - xarray
+  - pandas
+  - scipy
+  - sklearn
+  - matplotlib
+  - cartopy
+  - calendar
+  - shapefile
+  - shapely
+  - glob
+  - geopandas
