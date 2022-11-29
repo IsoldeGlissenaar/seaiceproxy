@@ -4,7 +4,7 @@ Code creates a Random Forest Regression model that creates a proxy product for C
 
 ## Repository structure:
 ```
-cmip6_arctic_terns/
+seaiceproxy/
 │
 ├─ data/
 │
