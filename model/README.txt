@@ -1,0 +1,25 @@
+This folder contains trained Random Forest Regression models that predict sea ice thickness from CIS ice charts and scatterometer data. There are seperate models for two types of scatterometer (C-band and Ku-band) and each of the winter months (November-April). The models are trained on, and can be used on, a dataset with 24 features:
+- Partial concentration New Ice (between 0 and 1)
+- Partial concentration Nilas
+- Partial concentration Young Ice 
+- Partial concentration Grey Ice
+- Partial concentration Grey White Ice
+- Partial concentration FYI
+- Partial concentration thin FYI 
+- Partial concentration first stage thin FYI
+- Partial concentration second stage thin FYI
+- Partial concentration medium FYI
+- Partial concentration thick FYI
+- Partial concentration Old Ice
+- Partial concentration second-year ice
+- Partial concentration MYI
+- Partial concentration pancake ice
+- Partial concentration small ice cake
+- Partial concentration ice cake
+- Partial concentration small floe
+- Partial concentration medium floe
+- Partial concentration big floe
+- Partial concentration vast floe
+- Partial concentration giant floe
+- Partial concentration fast ice
+- Scatterometer backscatter (between -30 and 0)
