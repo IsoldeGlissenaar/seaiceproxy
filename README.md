@@ -10,6 +10,8 @@ seaiceproxy/
 │  ├─ dataset/                       | dataset used in RFR model to create SIT proxy
 │  │  ├─ C-band/
 │  │  └─ Ku-band/
+│  ├─ proxy_SIT/                     | proxy SIT product 1992-2020 for November-April
+│  │  └─ ...
 │  └─ training_dataset/              | dataset used to train RFR model
 │     ├─ C-band/
 │     └─ Ku-band/
@@ -31,11 +33,17 @@ seaiceproxy/
 |
 ├─ src/
 │  ├─ analyze/                      | Scripts to analyze proxy SIT record
+│  │  └─ ...
 │  ├─ create_dataset_1992_2020/     | Scripts to create long-term dataset
+│  │  └─ ...
 │  ├─ create_training_dataset/      | Scripts to create training dataset
+│  │  └─ ...
 │  ├─ functions/                    | Define functions
+│  │  └─ ...
 │  ├─ preprocessing/                | Preprocessing of ice charts
+│  │  └─ ...
 │  ├─ testing/                      | Testing model
+│  │  └─ ...
 │  └─ predict_sit_1992-2020.py      | Train and apply model
 |
 └─ README.md
