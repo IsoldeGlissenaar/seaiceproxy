@@ -9,12 +9,16 @@ seaiceproxy/
 ├─ data/
 │  ├─ dataset/                       | dataset used in RFR model to create SIT proxy
 │  │  ├─ C-band/
+│  │  |  └─ ...
 │  │  └─ Ku-band/
+│  │  |  └─ ...
 │  ├─ proxy_SIT/                     | proxy SIT product 1992-2020 for November-April
 │  │  └─ ...
 │  └─ training_dataset/              | dataset used to train RFR model
 │     ├─ C-band/
+│     |  └─ ...
 │     └─ Ku-band/
+│        └─ ...
 │
 ├─ model/
 │  ├─ README.txt                     | Explanation of contents folder
@@ -44,7 +48,8 @@ seaiceproxy/
 │  │  └─ ...
 │  ├─ testing/                      | Testing model
 │  │  └─ ...
-│  └─ predict_sit_1992-2020.py      | Train and apply model
+│  ├─ predict_sit_1992-2020.py      | Train and apply model
+│  └─ environment.yml               | Conda environment used
 |
 └─ README.md
 
