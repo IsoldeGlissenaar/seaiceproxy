@@ -36,20 +36,21 @@ seaiceproxy/
 │  └─ RFR_Ku_12.sav		
 |
 ├─ src/
-│  ├─ analyze/                      | Scripts to analyze proxy SIT record
+│  ├─ analyze/                              | Scripts to analyze proxy SIT record
 │  │  └─ ...
-│  ├─ create_dataset_1992_2020/     | Scripts to create long-term dataset
+│  ├─ create_dataset_1992_2020/             | Scripts to create long-term dataset
 │  │  └─ ...
-│  ├─ create_training_dataset/      | Scripts to create training dataset
+│  ├─ create_training_dataset/              | Scripts to create training dataset
 │  │  └─ ...
-│  ├─ functions/                    | Define functions
+│  ├─ functions/                            | Define functions
 │  │  └─ ...
-│  ├─ preprocessing/                | Preprocessing of ice charts
+│  ├─ preprocessing/                        | Preprocessing of ice charts
 │  │  └─ ...
-│  ├─ testing/                      | Testing model
+│  ├─ testing/                              | Testing model
 │  │  └─ ...
-│  ├─ predict_sit_1992-2020.py      | Train and apply model
-│  └─ environment.yml               | Conda environment used
+│  ├─ predict_sit_1996-2020_loadmodel.py    | Apply model to dataset
+│  ├─ train_model.py                        | Train Random Forest Regression model
+│  └─ environment.yml                       | Conda environment used
 |
 └─ README.md
 
