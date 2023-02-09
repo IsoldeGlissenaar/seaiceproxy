@@ -1,6 +1,6 @@
 # seaiceproxy
 
-Code creates a Random Forest Regression model that creates a proxy product for Canadian Arctic sea ice thickness. The dataset that is used contains parameters (stage of development and floe size) from the Canadian Ice Service charts and scatterometer backscatter. The Random Forest Regression is trained on observed CryoSat-2 sea ice thickness. 
+Code creates a Random Forest Regression model that creates a proxy product for Canadian Arctic sea ice thickness. The dataset that is used contains parameters (stage of development and form of ice) from the Canadian Ice Service charts and scatterometer backscatter. The Random Forest Regression is trained on observed CryoSat-2 sea ice thickness. 
 
 ## Repository structure:
 ```
@@ -12,7 +12,7 @@ seaiceproxy/
 │  │  |  └─ ...
 │  │  └─ Ku-band/
 │  │  |  └─ ...
-│  ├─ proxy_SIT/                     | proxy SIT product 1992-2020 for November-April
+│  ├─ proxy_SIT/                     | proxy SIT product 1996-2020 for November-April
 │  │  └─ ...
 │  └─ training_dataset/              | dataset used to train RFR model
 │     ├─ C-band/
@@ -36,20 +36,21 @@ seaiceproxy/
 │  └─ RFR_Ku_12.sav		
 |
 ├─ src/
-│  ├─ analyze/                      | Scripts to analyze proxy SIT record
+│  ├─ analyze/                              | Scripts to analyze proxy SIT record
 │  │  └─ ...
-│  ├─ create_dataset_1992_2020/     | Scripts to create long-term dataset
+│  ├─ create_dataset_1992_2020/             | Scripts to create long-term dataset
 │  │  └─ ...
-│  ├─ create_training_dataset/      | Scripts to create training dataset
+│  ├─ create_training_dataset/              | Scripts to create training dataset
 │  │  └─ ...
-│  ├─ functions/                    | Define functions
+│  ├─ functions/                            | Define functions
 │  │  └─ ...
-│  ├─ preprocessing/                | Preprocessing of ice charts
+│  ├─ preprocessing/                        | Preprocessing of ice charts
 │  │  └─ ...
-│  ├─ testing/                      | Testing model
+│  ├─ testing/                              | Testing model
 │  │  └─ ...
-│  ├─ predict_sit_1992-2020.py      | Train and apply model
-│  └─ environment.yml               | Conda environment used
+│  ├─ predict_sit_1996-2020_loadmodel.py    | Apply model to dataset
+│  ├─ train_model.py                        | Train Random Forest Regression model
+│  └─ environment.yml                       | Conda environment used
 |
 └─ README.md
 
